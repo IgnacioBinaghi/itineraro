@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from generator import *
 
 load_dotenv()
-TOKEN = 'TOKEN'
+TOKEN = 'MTEwNjMzOTk4OTA2NDc5NDEzMg.GTfhgm.SqSuwhfe8FpTHipNiAvKsY1gvrBVXG13uN4bTQ'
 GUILD = os.getenv('Itineraro')
 
 intents = discord.Intents.default()

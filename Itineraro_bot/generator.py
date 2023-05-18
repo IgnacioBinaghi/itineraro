@@ -1,10 +1,10 @@
 import os
 import openai
 
-org_id = 'org-id'
+org_id = 'org-Mc54issDcu91GLgI5wR8b1EJ'
 # Load your API key from an environment variable or secret management service
 
-openai.api_key = ('KEY')
+openai.api_key = ('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')
 model_id = 'gpt-3.5-turbo'
 
 def convo(plans):

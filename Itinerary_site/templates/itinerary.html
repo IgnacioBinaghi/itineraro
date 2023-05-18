@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Itinerary - Planning Made Easy</title>
+    <style>
+        body {
+    background-image: url('static/img/Itineraro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: crisp-edges;
+ image-rendering: -moz-crisp-edges;          /* Firefox */
+ image-rendering: -o-crisp-edges;            /* Opera */
+ image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+ -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+ background-size: cover;
+  width: 100%;
+  height: 120%;
+  color: #30394B;
+}
+      body {
+  background-color: #E1DFCF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 20;
+  padding: 0;
+}
+div {
+    color: #30394B;
+  margin: auto;
+  margin-top: -50px; /* adjust this value to move the div down */
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: inherit;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+@media (max-width: 600px) {
+  div {
+    margin-top: -60px;
+  }
+}
+h1 {
+  lor: #30394B;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  text-align: center;
+  margin-top: 50px;
+}
+h2 {
+  font-weight: inherit;
+  color: #30394B;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom:0 ;
+}
+input,
+select,
+textarea {
+  background-color: #30394B;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  display: block;
+  font-size: 1em;
+  margin-top: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  text-align: left;
+}
+
+#button {
+    background-color:#30394B;border-radius:.5em;border:none;color:white;cursor:pointer;font-size:1em;margin-top:.5em;padding:.5em .75em .5em .75em;
+    transition: .2s;
+    margin: 100px;
+    margin-bottom: 10px;
+    margin-top:.5em;
+    text-align: center;
+}
+
+#button:hover {
+    background-color:#47549F;
+    transition: .2s;
+    margin: 100px;
+    margin-bottom: 10px;
+    margin-top:.5em;
+    text-align: center;
+}
+
+ul {
+    list-style-type:none
+    width: 20%;
+}
+
+li {
+    background-color:#30394B;border-radius:.5em;color:white;margin-top:.5em;padding:.5em;
+    transition: .2s;
+    width: 20%;
+}
+li:hover{
+    background-color:#bf404c;border-radius:.5em;color:white;margin-top:.5em;padding:.5em;
+    cursor: pointer;
+    transition: .2s;
+    width: 20%;
+}
+#box {
+        display: none;
+        margin: 0 auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px solid red;
+        text-align: center;
+        color:#30394B;
+      }
+.container{
+  color:#30394B;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center; background-color: #30394B; max-width:300px;">
+  <h1>Your Itinerary</h1>
+</div>
+
+    <div style="margin:auto; max-width:800px; margin-top:150px;">
+
+      <div class="container">
+    {{ itinerary_html|safe }}
+    </div>
+      
+      <form>
+       <!-- Centering the buttons -->
+       <div style = "text-align:center; margin-top: 15px; display: flex;">
+          <input type="submit" value="Edit" id="button">
+          <input type="submit" value="Share" id="button">
+       </div>
+       </form>
+    </div>
+  </body>
+</html>
+
