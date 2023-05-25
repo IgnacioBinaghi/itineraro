@@ -415,12 +415,13 @@ li:hover{
       <textarea id="requirements" name="requirements" required></textarea><br /><br />
       <label for="business">How busy would you like to be?</label><br />
       <textarea id="business" name="business" required></textarea><br /><br />
+      <label for="budget">What's your budget?</label><br />
+      <textarea id="budget" name="budget" required></textarea><br /><br />
       
        <!-- Centering the buttons -->
        <div style = "text-align:center; margin-top: 15px; display: flex; margin: 10px;">
-          <input type="submit" value="Create Itinerary" id="button" href="/itinerary" onclick="$('#loading').show();">
-          <div id="loading" style="display:none;"><img src= url(static/img/loading.gif) alt="" /></div>
-          <input type="submit" value="Share and Plan" id="button" href="/itinerary">
+          <input type="submit" name = 'create' value="Create Itinerary" id="button">
+          <input type="submit" name = 'share' value="Share and Plan" id="button">
        </div>
        </form>
     </div>
@@ -448,22 +449,6 @@ countriesElement.addEventListener("change", () => {
   // Add the new list item to the list of selected countries
   selectedCountriesElement.appendChild(li);
 });
-
-  const shareButton = document.querySelector('#share-button');
-
-  shareButton.addEventListener('click', () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'My awesome post',
-        text: 'Check out this awesome post!',
-        url: window.location.href
-      })
-      .then(() => console.log('Successful share'))
-      .catch(error => console.log('Error sharing:', error));
-    } else {
-      console.log('Web Share API not supported');
-    }
-  });
 
 
 
